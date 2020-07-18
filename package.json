@@ -1,0 +1,26 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuongvgc/natours.git"
+  },
+  "keywords": [
+    "natour",
+    "nature",
+    "tour",
+    "landing",
+    "page"
+  ],
+  "author": "Victor Vuong Do",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vuongvgc/natours/issues"
+  },
+  "homepage": "https://github.com/vuongvgc/natours#readme"
+}
