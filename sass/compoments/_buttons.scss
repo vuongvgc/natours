@@ -4,7 +4,7 @@
         animation-fill-mode: backwards;}
         &--white {
         background-color: $color-white;
-        color: $color-grey-light;
+        color: $color-grey-dark;
             &::after {
             background-color:$color-white;}}
     &:link, &:visited {

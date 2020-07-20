@@ -1,7 +1,6 @@
 .row {
     max-width: $grip-width;
     box-sizing: border-box;
-    background-color: #eee;
     margin: 0 auto;
 
     &:not(:last-child) {
@@ -15,7 +14,6 @@
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
         }
-        border: 1px red solid;
     }
 
     .col-1-of-2 {
