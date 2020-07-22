@@ -43,7 +43,7 @@
 
 
     //Content
-
+    // Front side
 
     &__picture {
         height: 23rem;
@@ -51,6 +51,8 @@
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85% , 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85% , 0 100%);
+        border-top-left-radius: 3px;
+        border-right-style: 3px;
         &--1 {
             background-image: linear-gradient(to right bottom,
              $color-secondary-light, 
@@ -118,5 +120,27 @@
         }
         
     }
-    
+    //Back side
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        text-transform: uppercase;
+        width: 90%;
+        color: $color-white;
+    }
+    &__price-box {
+        margin-bottom: 8rem;
+
+    }
+    &__price-only {
+        font-size: 1.4rem;
+    }
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
+
+    }
 }

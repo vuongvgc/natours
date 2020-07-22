@@ -3,10 +3,17 @@
         animation: moveInBottom 0.5s ease-out 0.75s ;
         animation-fill-mode: backwards;}
         &--white {
-        background-color: $color-white;
-        color: $color-grey-dark;
+            background-color: $color-white;
+            color: $color-grey-dark;
             &::after {
-            background-color:$color-white;}}
+                background-color:$color-white;}}
+        
+        &--green {
+            background-color: $color-primary;
+            color: $color-white;
+            &::after {
+                background-color:$color-primary;}
+        }
     &:link, &:visited {
     display: inline-block;
     text-transform: uppercase;
