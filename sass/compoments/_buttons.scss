@@ -14,7 +14,7 @@
             &::after {
                 background-color:$color-primary;}
         }
-    &:link, &:visited {
+    &, &:link, &:visited {
     display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
@@ -23,7 +23,11 @@
     border-radius: 999px;
     transition: all 0.2s;
     position: relative;
-    font-size: $default-font-size; }
+    font-size: $default-font-size; 
+    // change for the <button> element
+    cursor: pointer;
+    border: none;
+    }
     &:hover {
         transform: translateY(-.3rem);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
@@ -33,7 +37,8 @@
         }
     
     }
-    &:active {
+    &:active, &:focus {
+        outline: none;
         transform: translateY(-.1rem);
         box-shadow: 0 .5rem 0.1rem rgba($color-black, 0.2);
     
