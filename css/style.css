@@ -442,7 +442,7 @@ body {
   .popup:target .popup__content {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
-  .popup__close {
+  .popup__close:link, .popup__close:visited {
     position: absolute;
     font-size: 3rem;
     top: 2.5rem;
@@ -450,8 +450,8 @@ body {
     color: #333;
     transition: all .2s;
     text-decoration: none; }
-    .popup__close:hover {
-      color: #55c57a; }
+  .popup__close:hover {
+    color: #55c57a; }
 
 .bg-video {
   height: 100%;

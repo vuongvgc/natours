@@ -62,13 +62,17 @@
     }
 
     &__close {
-        position: absolute;
-        font-size: 3rem;
-        top: 2.5rem;
-        right: 2.5rem;
-        color: $color-grey-dark-3;
-        transition: all .2s;
-        text-decoration: none;
+        &:link,
+        &:visited {
+            position: absolute;
+            font-size: 3rem;
+            top: 2.5rem;
+            right: 2.5rem;
+            color: $color-grey-dark-3;
+            transition: all .2s;
+            text-decoration: none;
+        }
+        
         &:hover {
             color: $color-primary;
         }
