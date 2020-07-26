@@ -41,10 +41,8 @@
         transform: rotateY(0deg);
     }
 
-
     //Content
     // Front side
-
     &__picture {
         height: 23rem;
         background-size: cover;
@@ -120,6 +118,7 @@
         }
         
     }
+    
     //Back side
     &__cta {
         position: absolute;

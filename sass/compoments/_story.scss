@@ -7,6 +7,7 @@
     padding-left: 9rem;
     font-size: $default-font-size;
     transform: skewX(-12deg);
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -18,8 +19,8 @@
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
-        
     }
+
     &__picture {
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
@@ -27,9 +28,11 @@
         backface-visibility: hidden;
         
     }
+
     &__text {
         transform: skewX(12deg);
     }
+
     &__caption {
         font-size: 1.8rem;
         text-transform: uppercase;
@@ -43,10 +46,12 @@
         backface-visibility: hidden;
         opacity: 0;
     }
+
     &:hover &__caption {
         transform: translate(-50%, -50%);
         opacity: 1;
     }
+    
     &:hover &__picture {
         transform: translateX(-4rem) scale(1);
         filter: blur(3px) brightness(80%);

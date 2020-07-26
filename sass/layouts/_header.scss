@@ -17,6 +17,7 @@
         left: 4rem;
         animation: moveInLeft 1s ease-out ;
     }
+
     &__logo {
         height: 3.5rem;
     }
@@ -26,7 +27,6 @@
         top: 40%;
         left: 50%;
         transform: translate(-50%,-50%);
-        text-align: center;
-        
+        text-align: center;     
     }
 }
