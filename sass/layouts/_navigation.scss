@@ -13,6 +13,16 @@
         background-color: $color-white;
         z-index: 2000;
         text-align: center;
+        /*
+        @include respond(tab-port) {
+            height: 4.5rem;
+            width: 4.5rem;
+        }
+        @include respond(phone) {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+        */
     }
 
     &__background {
@@ -25,6 +35,16 @@
         right: 6.5rem;
         z-index: 1000;
         transition: all .8s cubic-bezier(0.85, 0, 0.07, 1);
+        /*
+        @include respond(tab-port) {
+            height: 4rem;
+            width: 4rem;
+        }
+        @include respond(phone) {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+        */
      //   transform: scale(50)
     }
 
