@@ -5,7 +5,6 @@
     position: relative;
     //Function
     &__side {
-        background-color: orangered;
         height: 53rem;
         transition: all .8s ease;
         position: absolute;
@@ -141,5 +140,68 @@
         font-size: 6rem;
         font-weight: 100;
 
+    }
+    @include respond(tab-port) {
+        height: auto;
+        position: relative;
+        background-color: $color-white;
+        //Function
+        &__side {
+            height: auto;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border-radius: 3px;
+            overflow: hidden;
+            box-shadow: none;
+            &--back {
+                clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0 100%);
+                transform: rotateY(0deg);
+            }
+        }
+        &:hover &__side--front {
+            transform: rotateY(0deg);
+        }  
+
+        //Content
+        // Front side
+        &__picture {
+            &--1 {
+                background-image: linear-gradient(to right bottom,
+                $color-secondary-light, 
+                $color-secondary-dark) ,
+                url(../../img/nat-5.jpg);
+            }
+            &--2 {
+                background-image: linear-gradient(to right bottom,
+                $color-primary-light, 
+                $color-primary-dark) ,
+                url(../../img/nat-6.jpg);
+            }
+            &--3 {
+                background-image: linear-gradient(to right bottom,
+                $color-tertiary-light, 
+                $color-tertiary-dark), url(../../img/nat-7.jpg);
+            }
+        }
+        //Back side
+        &__cta {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            color: $color-white;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+            padding: 7rem 4rem 3rem 4rem;
+        }
+        &__price-box {
+            margin-bottom: 3rem;
+
+        }
+        &__price-value {
+            font-size: 4rem;
+        }
     }
 }
