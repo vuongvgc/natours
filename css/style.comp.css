@@ -25,7 +25,7 @@ big-desktop
   box-sizing: inherit; }
 
 html {
-  font-size: 162.5%;
+  font-size: 62.5%;
   /*
     @include respond(phone)  // < 600
     {
