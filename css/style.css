@@ -25,29 +25,33 @@ big-desktop
   box-sizing: inherit; }
 
 html {
-  font-size: 162.5%;
+  font-size: 62.5%;
   /*
     @include respond(phone)  // < 600
     {
         font-size: 50%; //  1 rem = 8 px : 8/16 = 0.5
     }
     */ }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
 
 body {
   box-sizing: border-box;
   padding: 3rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     body {
       padding: 0rem; } }
+
+::selection {
+  background-color: #55c57a;
+  color: #fff; }
 
 @keyframes moveInLeft {
   0% {
@@ -100,7 +104,7 @@ body {
         animation-iteration-count: 3;
         animation-delay: 3s;
         */ }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .header-primary--main {
         font-size: 5rem;
         letter-spacing: 1rem; } }
@@ -112,7 +116,7 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .header-primary--sub {
         letter-spacing: .5rem; } }
 
@@ -124,7 +128,7 @@ body {
   letter-spacing: .2rem;
   color: #28b485;
   transition: all .2s; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .header-secondary {
       font-size: 3rem; } }
   @supports (-webkit-background-clip: text) or (background-clip: text) {
@@ -154,25 +158,25 @@ body {
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-bottom-medium {
       margin-bottom: 2rem !important; } }
 
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-bottom-big {
       margin-bottom: 4rem !important; } }
 
 .u-margin-top-big {
   margin-bottom: 8rem !important; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-top-big {
       margin-bottom: 4rem !important; } }
 
 .u-margin-top-huge {
   margin-bottom: 10rem !important; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .u-margin-top-huge {
       margin-bottom: 5rem !important; } }
 
@@ -313,10 +317,10 @@ body {
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../img/hero.jpg); } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
@@ -340,14 +344,14 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .row {
       max-width: 100rem;
       padding: 0; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 70rem;
       padding: 0; } }
@@ -359,10 +363,10 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important;
         margin-bottom: 6rem; } }
@@ -383,7 +387,7 @@ body {
   background-color: #333;
   font-size: 1.4rem;
   padding: 10rem 0; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer {
       width: 100%;
       text-align: center; } }
@@ -393,7 +397,7 @@ body {
     width: 15rem;
     height: auto;
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__logo {
         margin-bottom: 4rem; } }
   .footer__navigation {
@@ -426,7 +430,7 @@ body {
     width: 80%;
     float: right;
     text-align: left; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         float: none;
         width: 100%; } }
@@ -620,7 +624,7 @@ body {
 .form__radio-group {
   display: inline-block;
   width: 49%; }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .form__radio-group {
       width: 100%;
       display: block;
@@ -755,7 +759,7 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       position: relative;
@@ -803,7 +807,7 @@ body {
     transition: all .2s;
     z-index: 10;
     outline-offset: 2rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .composition__photo {
         width: 33.333333%;
         float: left;
@@ -812,7 +816,7 @@ body {
     .composition__photo--p1 {
       left: 0;
       top: -2rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p1 {
           left: 0;
           top: 0;
@@ -820,7 +824,7 @@ body {
     .composition__photo--p2 {
       right: 0;
       top: 2rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p2 {
           left: 0;
           top: -1rem;
@@ -829,7 +833,7 @@ body {
     .composition__photo--p3 {
       left: 20%;
       top: 10rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p3 {
           left: 0;
           top: 1rem;
@@ -850,7 +854,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: all .3s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .feature-box {
       padding: 2rem; } }
   .feature-box__icon {
@@ -858,7 +862,7 @@ body {
     padding-bottom: .5rem;
     display: inline-block;
     color: #28b485; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .feature-box__icon {
         margin: 0; } }
     @supports (-webkit-background-clip: text) or (background-clip: text) {
@@ -878,12 +882,12 @@ body {
   padding-left: 9rem;
   font-size: 1.6rem;
   transform: skewX(-12deg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .story {
       width: 100%;
       padding: 4rem;
       padding-left: 7rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .story {
       transform: skewX(0); } }
   .story__shape {
@@ -896,7 +900,7 @@ body {
     overflow: hidden;
     padding-right: 3rem;
     border-radius: 50%; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .story__shape {
         transform: translateX(-3rem) skewX(0); } }
     @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
@@ -914,7 +918,7 @@ body {
     backface-visibility: hidden; }
   .story__text {
     transform: skewX(12deg); }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .story__text {
         transform: skewX(0); } }
   .story__caption {
@@ -940,7 +944,7 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 15rem 5rem; } }
 
@@ -952,7 +956,7 @@ body {
   transform: skewY(-7deg); }
   .section-features > * {
     transform: skewY(7deg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-features {
       padding: 4rem 0; } }
 
@@ -960,7 +964,7 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 10rem 0;
   margin-top: -10rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-tour {
       padding-top: 15rem;
       padding-bottom: 1rem; } }
@@ -969,14 +973,14 @@ body {
   padding: 0rem 0 10rem 0;
   position: relative;
   background-color: #f7f7f7; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-stories {
       padding: 5rem; } }
 
 .section-book {
   padding: 15rem 0;
   background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-book {
       padding: 10rem; } }
 
@@ -988,7 +992,7 @@ body {
   .book__form {
     width: 50%;
     padding: 3rem; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .book {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../../img/nat-10.jpg);
       background-size: cover;
@@ -997,7 +1001,7 @@ body {
       .book__form {
         width: 60%;
         padding: 2rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .book {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%, transparent 100%), url(../../img/nat-10.jpg); }
       .book__form {
