@@ -120,15 +120,18 @@ body {
   font-size: 3.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
   display: inline-block;
-  -webkit-background-clip: text;
-  color: transparent;
   letter-spacing: .2rem;
+  color: #28b485;
   transition: all .2s; }
   @media (max-width: 37.5em) {
     .header-secondary {
       font-size: 3rem; } }
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    .header-secondary {
+      background-image: linear-gradient(to right, #7ed56f, #28b485);
+      -webkit-background-clip: text;
+      color: transparent; } }
   .header-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -691,9 +694,6 @@ body {
   .card__picture {
     height: 23rem;
     background-size: cover;
-    background-blend-mode: screen;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
     border-right-style: 3px; }
     .card__picture--1 {
@@ -702,6 +702,11 @@ body {
       background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../../img/nat-6.jpg); }
     .card__picture--3 {
       background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../../img/nat-7.jpg); }
+    @supports (background-blend-mode: screen) {
+      .card__picture {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        background-blend-mode: screen; } }
   .card__heading {
     color: #fff;
     text-transform: uppercase;
@@ -852,12 +857,15 @@ body {
     font-size: 6rem;
     padding-bottom: .5rem;
     display: inline-block;
-    background: linear-gradient(to right, #7ed56f, #28b485);
-    -webkit-background-clip: text;
-    color: transparent; }
+    color: #28b485; }
     @media (max-width: 56.25em) {
       .feature-box__icon {
         margin: 0; } }
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      .feature-box__icon {
+        background: linear-gradient(to right, #7ed56f, #28b485);
+        -webkit-background-clip: text;
+        color: transparent; } }
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03); }
 
@@ -883,15 +891,22 @@ body {
     height: 15rem;
     float: left;
     background-color: orangered;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
-    position: relative; }
+    position: relative;
+    overflow: hidden;
+    padding-right: 3rem;
+    border-radius: 50%; }
     @media (max-width: 37.5em) {
       .story__shape {
         transform: translateX(-3rem) skewX(0); } }
+    @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+      .story__shape {
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        padding-right: 0;
+        border-radius: 0; } }
   .story__picture {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
@@ -951,8 +966,9 @@ body {
       padding-bottom: 1rem; } }
 
 .section-stories {
-  padding: 15rem 0 10rem 0;
-  position: relative; }
+  padding: 0rem 0 10rem 0;
+  position: relative;
+  background-color: #f7f7f7; }
   @media (max-width: 56.25em) {
     .section-stories {
       padding: 5rem; } }

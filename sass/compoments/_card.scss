@@ -45,9 +45,6 @@
     &__picture {
         height: 23rem;
         background-size: cover;
-        background-blend-mode: screen;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85% , 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85% , 0 100%);
         border-top-left-radius: 3px;
         border-right-style: 3px;
         &--1 {
@@ -66,6 +63,11 @@
             background-image: linear-gradient(to right bottom,
             $color-tertiary-light, 
             $color-tertiary-dark), url(../../img/nat-7.jpg);
+        }
+        @supports (background-blend-mode: screen) {
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 85% , 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85% , 0 100%);
+            background-blend-mode: screen;
         }
     }
     &__heading {

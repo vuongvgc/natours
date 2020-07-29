@@ -37,8 +37,9 @@
 }
 
 .section-stories {
-    padding: 15rem 0 10rem 0;
+    padding: 0rem 0 10rem 0;
     position: relative;
+    background-color: $color-grey-light;
     @include respond(tab-port) {
         padding: 5rem;
     }
